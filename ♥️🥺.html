@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Envelope Animation</title>
+  <style>
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .envelope {
+      position: relative;
+      width: 260px;
+      height: 160px;
+      background: #1e3d7b;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .top-part {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 110px;
+      background: #0d2b56;
+      clip-path: polygon(0 0, 100% 0, 50% 70%);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      transform-origin: top center;
+      z-index: 3;
+    }
+
+    .envelope:hover .top-part {
+      transform: rotateX(180deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .msg {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: left;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .envelope:hover .msg {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 16px;
+      color: #0d2b56;
+      margin-bottom: 8px;
+    }
+
+    .count {
+      font-weight: bold;
+      color: red;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .message-text {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="envelope">
+    <div class="msg">
+      <div class="name">nasra cabaas♥️🥺</div>
+      <span class="count"></span>
+      <div class="message-text">
+        Subax wanaagsan macanbadantayda  quruxda badan,
+Waxa rajaynaya ina si wacn o qurux badan u so tooste wax jaceleste ina si qalbiyan ku dhaho wa ku jeclahay ♥️🥺
+
+
+
+
+      </div>
+    </div>
+    <div class="top-part"></div>
+  </div>
+
+</body>
+</html>
